@@ -32,10 +32,4 @@ while True:
 
     for rom in roms: 
         temp = ds_sensor.read_temp(rom)# Läs temperaturen från den aktuella sensorn
-        
-        print("Pico ID:", pico_id)  # Skriver ut det unika ID:t för Pico
-        print("ROM-adresser:", roms)  # Skriver ut alla upptäckta ROM-adresser
-        print("Aktuell ROM-adress:", rom)  # Skriver ut ROM-adressen för den aktuella sensorn
-        print("Temperatur (°C):", temp)  # Skriver ut temperaturen
         print(f"{pico_id.hex()} {rom.hex()} {temp:.2f}")  
-    time.sleep(5)
